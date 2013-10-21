@@ -1,6 +1,8 @@
 // ****************************************************************
+//
 //  Given the total amount of money collected for a given month,
 //  this program calculates the taxes owed to the state and county.
+//
 // *****************************************************************
 
 #include <iostream>
