@@ -9,12 +9,12 @@ using namespace std;
 
 int main()
 {	
-	const float STATE = 0.065;	 // state tax rate 
-	const float COUNTY = 0.0275;	// county tax rate 
+	const float STATE = 0.065;        // state tax rate 
+	const float COUNTY = 0.0275;      // county tax rate 
 	
-	string month			 // Month for which taxes should be calculated
-	int year			 // Year in which the given month resides	
-	float totalCollected;		// total amount of DOLLARS collected for the given month
+	string month;                     // Month for which taxes should be calculated
+	int year                          // Year in which the given month resides	
+	float totalCollected;             // Total amount of DOLLARS collected for the given month
 		
 	cout << "Enter the month for which taxes should be calculated (SPELL IT OUT): ";
 	cin >> month;
@@ -27,15 +27,15 @@ int main()
 	
 	float sales = totalCollected / ((STATE + COUNTY) + 1);
 	
-	long stateTaxINT = sales * 100 * (STATE)		 // convert sales tax to cents in order to truncate extra decimal places and properly calculate taxes
+	long stateTaxINT = sales * 100 * (STATE);                  // convert sales tax to cents in order to truncate extra decimal places and properly calculate taxes
 	long countyTaxINT = sales * 100 * (COUNTY);		
 
-	float stateTax = (float)stateTaxINT / 100;		// convert back to dollars, typecast TaxINT to float for final calculation
+	float stateTax = (float)stateTaxINT / 100;                // convert back to dollars, typecast TaxINT to float for final calculation
 	float countyTax = (float)countyTaxINT / 100;
 	
-	float totalTax = countyTax + stateTax;			// Total sales tax paid by customers
+	float totalTax = countyTax + stateTax;                    // Total sales tax paid by customers
 
-	cout << setprecision(2) << fixed;			// Force output of two decimal places
+	cout << setprecision(2) << fixed;                         // Force output of two decimal places
 	cout << month << " " << year << "\n-----------------" << endl;
 	cout << "Total Collected:\t$ " << totalCollected << endl;
 	cout << "Sales:\t\t\t$ " << sales << endl;
